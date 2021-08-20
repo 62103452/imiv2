@@ -30,8 +30,17 @@
 
   <script>
       $(()=>{
-          alert("HELLO");
-      })
+         // alert("HELLO");
+
+         let url ="https://api.thingspeak.com/channels/1458744/feeds.json?results=2";
+
+         $.getJSON(url)
+            .done(function(data){
+              console.log(data);
+             })
+            .fail(function(error){
+            });
+      });
      
   </script>
 </html>
